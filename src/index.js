@@ -2,12 +2,13 @@
 
 import dotenv from 'dotenv'
 import connectDB from './db/index.js';
+import express from 'express'
 
 dotenv.config({
     path : './env'
 })
 
-connectDB()
+connectDB() 
 .then( ()=>{
     app.on("error",(error)=>{
         console.log("ERRRR:",error);
@@ -33,7 +34,8 @@ connectDB()
 
 //<---------1st approach------------------>
 // import express from 'express'
-// const app = express();
+// import { express } from 'express';
+const app = express();
 
 // //connect to DB
 // ( async ()=>{
